@@ -29,8 +29,6 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
 };
 
 Profile.defaultProps = {
-  avatar:
-    'https://ih1.redbubble.net/image.188518724.7199/flat,128x128,075,t-pad,128x128,f8f8f8.jpg',
   stats: {
     followers: 0,
     views: 0,
