@@ -1,19 +1,28 @@
 import React from 'react';
 import styles from './transaction.module.css';
 
-export const Statistics = ({ title, stats }) => (
-    <section className={styles.statistics}>
-    <h2 className={styles.title}>{title}</h2>
-  
-    <ul className={styles.statlist}>{stats.map((per) => (
-        <ListStatistics key={per.id} data={per}/>
-    ))}</ul>
-  </section>
-  );
+export const TransactionHistory = ({ items = [] }) => (
+  <table className={styles.transactionHistory}>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Currency</th>
+      </tr>
+    </thead>
 
-  const ListStatistics = ({data:{label, percentage}}) => (
-    <li className={styles.item}>
-    <span className={styles.label}>{label}</span>
-    <span className={styles.percentage}> {percentage}%</span>
-  </li>
-  )
+    <tbody>
+      {items.map(item => (
+        <TransactionHistoryItem key={item.id} {...item} />
+      ))}
+    </tbody>
+  </table>
+);
+
+const TransactionHistoryItem = ({ type, amount, currency }) => (
+  <tr>
+    <td>{type}</td>
+    <td>{amount}</td>
+    <td>{currency}</td>
+  </tr>
+);
