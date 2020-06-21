@@ -5,6 +5,7 @@
     padding-top: 30px;
     border: 1px solid black;
     margin-bottom: 20px;
+    box-shadow: 1px 1px 15px;
   }
   
   .title {
@@ -13,7 +14,6 @@
     font-size: 16px;
     padding-bottom: 30px;
     color:  #d8571b;
-    
   }
   
   .statList {
@@ -31,6 +31,7 @@
     text-align: center;
     padding: 10px 0 16px;
     border: 1px solid black; 
+    box-shadow: 1px 1px 7px;
   }
   
   .label {
